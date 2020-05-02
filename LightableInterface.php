@@ -3,7 +3,7 @@
 
 interface LightableInterface
 {
-    public function switchOn(bool $lumos): bool;
+    public function switchOn(): bool;
 
-    public function switchOff(bool $lumos):bool;
+    public function switchOff():bool;
 }

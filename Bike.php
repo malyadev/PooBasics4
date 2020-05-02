@@ -1,17 +1,20 @@
 <?php
 
-class Bike extends Vehicule 
+class Bike extends Vehicule implements LightableInterface
 {
-    protected $currentSpeed = 10;
+    protected $currentSpeed = 15;
 
-    public function homer(LightableInterface $vehicule)
+    public function switchOn(): bool
     {
         if ($this->currentSpeed > 10){
-            $vehicule->switchOn(true);
-        }elseif ($this->currentSpeed < 10){
+            return true;
+        }elseif ($this->currentSpeed <= 10){
             return false;
         }
+    }
 
-        $vehicule->switchOff(false);
+    public function switchOff(): bool
+    {
+        return false;
     }
 }

@@ -94,6 +94,4 @@ abstract class Vehicule
     {
         $this->nbWheels = $nbWheels;
     }
-
-
 }
