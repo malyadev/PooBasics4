@@ -48,6 +48,12 @@ class Car extends Vehicule
     {
         $this->energyLevel = $energyLevel;
     }
+
+    public function homer(LightableInterface $vehicule)
+    {
+        $vehicule->switchOn(true);
+        $vehicule->switchOff(false);
+    }
 }
 
 // Code gardé car ces méthodes sont bien plus rigolotes lol no delete please
